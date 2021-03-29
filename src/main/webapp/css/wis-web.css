@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.imgcontainer {
+  position: relative;
+  text-align: center;
+ 
+}
+.top-left {
+  position: absolute;
+  top: 32px;
+  left: 64px;
+}
+
+
+
