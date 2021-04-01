@@ -10,7 +10,13 @@ import javax.servlet.http.HttpSession;
 import org.wis.entity.User;
 import org.wis.service.IUserService;
 import org.wis.service.impl.UserServiceImpl;
+import org.wis.util.SHAUtil;
 
+
+//Author: Liang Sun
+//Date: March 31, 2021
+//Purpose: WIS Checking Register Servlet
+//Project: Welcome Institute of Studies (WIS) Web App Project
 /**
  * Servlet implementation class CheckRegisterServlet
  */
@@ -25,8 +31,8 @@ public class CheckRegisterServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// get user information from register page
 		String UserName=request.getParameter("UserName");
-		String UserPassword=request.getParameter("UserPassword");
-		
+		//String UserPassword=request.getParameter("UserPassword");
+		String UserPassword=SHAUtil.encryptThisString(request.getParameter("UserPassword"));
 		User auser=new User(UserName,UserPassword);
 		IUserService userService=new UserServiceImpl();
 		// execute add query 

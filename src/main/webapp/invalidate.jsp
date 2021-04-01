@@ -8,6 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<% // Author: Liang Sun %>
+	<% // Date: March 31, 2021 %>
+	<% // Purpose: Invalidation sessions %>
+	<% // Project: Welcome Institute of Studies (WIS) Web App Project %>
+
 	<%
 	//  invalidat the "error" session
 		String error=(String)session.getAttribute("error");

@@ -9,10 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import org.wis.entity.User;
 import org.wis.service.IUserService;
 import org.wis.service.impl.UserServiceImpl;
+import org.wis.util.SHAUtil;
 
 import javax.servlet.*;
 import javax.servlet.http.*;  
 
+
+//Author: Liang Sun
+//Date: March 31, 2021
+//Purpose: WIS Checking Login Servlet
+//Project: Welcome Institute of Studies (WIS) Web App Project
 /**
  * 
  * Servlet implementation class CheckLoginServlet
@@ -28,8 +34,8 @@ public class CheckLoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// get user information from login page
 		String UserName=request.getParameter("UserName");
-		String UserPassword=request.getParameter("UserPassword");
-		
+		//String UserPassword=request.getParameter("UserPassword");
+		String UserPassword=SHAUtil.encryptThisString(request.getParameter("UserPassword"));
 		User auser=new User(UserName,UserPassword);
 		IUserService userService=new UserServiceImpl();
 		// check information in MySQL

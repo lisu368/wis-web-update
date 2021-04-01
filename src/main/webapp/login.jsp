@@ -10,9 +10,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   	<link rel="stylesheet" href="css/wis-web.css">
-
+ 	<script src="js/checkpassword.js"></script>
 </head>
 <body>
+	<% // Author: Liang Sun %>
+	<% // Date: March 31, 2021 %>
+	<% // Purpose: WIS Login Page %>
+	<% // Project: Welcome Institute of Studies (WIS) Web App Project %>
+
 	<div class="imgcontainer">
   		<img src="picture/10.jpg" alt="Snow" style="width:100%;">
 
@@ -100,7 +105,7 @@
 	<div class="container col-md-4 pt-4">
   	<h2>Login</h2>
   
-		  <form action="CheckLoginServlet" class="was-validated" method="post">
+		  <form action="CheckLoginServlet" class="was-validated"  method="post">
 		    <div class="form-group">
 		      <label for="UserName">Username:</label>
 		      <input type="text" class="form-control" placeholder="Enter username" name="UserName" required>
@@ -109,12 +114,12 @@
 		    </div>
 		    <div class="form-group">
 		      <label for="UserPassword">Password:</label>
-		      <input type="password" class="form-control" placeholder="Enter password" name="UserPassword" required>
-		      <div class="valid-feedback">Valid.</div>
-		      <div class="invalid-feedback">Please fill out this field.</div>
+		      <input type="password" class="form-control" placeholder="Enter password" name="UserPassword" id="UserPassword" required>
+		      <div class="valid-feedback">6 to 20 characters including number, uppercase and lowercase letter.</div>
+		      <div class="invalid-feedback">6 to 20 characters including number, uppercase and lowercase letter.</div>
 		    </div>
-		 
-		    <button type="submit" class="btn btn-primary">Login</button>
+		 	
+		    <button type="submit" class="btn btn-primary" onclick="CheckPassword(event)">Login</button>
 		  </form>
 	</div>
 	

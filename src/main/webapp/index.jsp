@@ -13,6 +13,10 @@
 	
 </head>
 <body>
+<% // Author: Liang Sun %>
+<% // Date: March 31, 2021 %>
+<% // Purpose: WIS Home Page %>
+<% // Project: Welcome Institute of Studies (WIS) Web App Project %>
 	<div class="imgcontainer">
   		<img src="picture/10.jpg" alt="Snow" style="width:100%;">
 

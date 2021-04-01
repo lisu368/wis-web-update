@@ -7,7 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-
+//Author: Liang Sun
+//Date: March 31, 2021
+//Purpose: WIS Handling DataBase Operations
+//Project: Welcome Institute of Studies (WIS) Web App Project
 
 public class DBUtil {
 	// basic MySQL information

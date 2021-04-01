@@ -5,6 +5,11 @@ import org.wis.dao.impl.UserDaoImpl;
 import org.wis.entity.User;
 import org.wis.service.IUserService;
 
+//Author: Liang Sun
+//Date: March 31, 2021
+//Purpose: WIS Implement Class
+//Project: Welcome Institute of Studies (WIS) Web App Project
+
 public class UserServiceImpl implements IUserService{
 	IUserDao userDao=new UserDaoImpl();
 	// execute add query method

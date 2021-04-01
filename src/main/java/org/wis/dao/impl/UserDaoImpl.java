@@ -2,6 +2,11 @@ package org.wis.dao.impl;
 
 import java.sql.*;
 
+//Author: Liang Sun
+//Date: March 31, 2021
+//Purpose: WIS Implement Class
+//Project: Welcome Institute of Studies (WIS) Web App Project
+
 import org.wis.dao.IUserDao;
 import org.wis.entity.User;
 import org.wis.util.DBUtil;
