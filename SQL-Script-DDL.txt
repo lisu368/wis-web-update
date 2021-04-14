@@ -1,0 +1,12 @@
+create database wis
+use wis
+
+CREATE TABLE `wis`.`loginfo` (
+  `UserName` VARCHAR(45) NOT NULL,
+  `UserPassword` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`UserName`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+select * from  loginfo
